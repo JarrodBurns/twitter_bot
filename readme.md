@@ -1,3 +1,4 @@
+
 # Twitter Bot
 
 Twitter Bot, Twitter, API, OAuth, Email, 
@@ -53,7 +54,7 @@ Once you have your key information filled out in **hidden.py**, access to your d
 
 You should see something like this.
 
-[BASH](https://imgur.com/0KoqVnp)
+![bot_access_ss](https://user-images.githubusercontent.com/87616660/129512022-9847460e-91f2-4bc5-b2a2-8e438ea9275e.png)
 
 These credentials allow you to post on behalf of another account.
 
