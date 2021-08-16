@@ -1,7 +1,6 @@
 
 # Twitter Bot
 
-Twitter Bot, Twitter, API, OAuth, Email, 
 This bot will monitor and reply to twitter mentions as well as email a specified account the details of messages.
 
 
