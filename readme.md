@@ -24,6 +24,7 @@ Twitter bot is dependent on the following libraries
 1. hidden.py - Where all of your secret stuff goes.
 2. twitter_bot_access.py - How you will get your bots account credentials
 3. twitter_bot.py - The script you will need to run continuously.
+4. last_seen.txt - Stores the id of the last seen tweet on disk so that we can reference it later.
 
 ## hidden.py
 
