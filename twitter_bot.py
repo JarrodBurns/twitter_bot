@@ -3,6 +3,7 @@ from hidden import consumer_key, consumer_secret, access_token, access_token_sec
 import tweepy
 import time
 import yagmail
+from datetime import datetime
 
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
@@ -39,7 +40,7 @@ def reply():
         if "#respondtome" in tweet.full_text.lower():
             api.update_status("@" + tweet.user.screen_name +
                               " Twitter bot reporting in!", tweet.id)  # Reply
-            api.retweet(tweet.id)  # ??
+            api.retweet(tweet.id)  # Share
         else:
             api.update_status("@" + tweet.user.screen_name +
                               " Jarrod has been forwarded a copy of your message." +
@@ -54,6 +55,13 @@ def reply():
         print(str(tweet.id), "-", tweet.full_text)
 
 
+count = 0
+
+current_time = datetime.now().strftime('%m-%d-%Y @ %H:%M:%S.')
+
 while True:
     reply()
-    time.sleep(60)
+    time.sleep(60)  # 60 is one minute.
+    count += 1
+    if count % 60 == 0:  # 60 is one hour. 1440 is one day.
+        print(f"Connection valid on {current_time} Request ID: {count}")
