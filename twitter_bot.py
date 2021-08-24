@@ -85,7 +85,7 @@ def current_time() -> str:
     return datetime.now().strftime('%m-%d-%Y @ %H:%M:%S')
 
 
-print(f"\nInitializing on {current_time()}.\n")
+print(f"\nInitializing: {__file__} on {current_time()}\n")
 
 count = 0
 while True:
@@ -93,5 +93,5 @@ while True:
     time.sleep(60)  # 60 is one minute.
     count += 1
     if count % 60 == 0:  # 60 is one hour. 1440 is one day.
-        print(f"Connection valid on {current_time()}. "
-              f"Request ID: {count} Report ID: {int(count / 60)}")
+        print(f"Connection valid on {current_time()} | "
+              f"Request ID: {count:0>7} Report ID: {int(count / 60):0>5}")
